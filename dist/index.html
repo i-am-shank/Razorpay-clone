@@ -13,8 +13,6 @@
     <style>
         .feature-section-3{
             background-size: 100% 100%;
-            padding-top: 12rem;
-            padding-bottom: 10rem;
         }
 
         .feature-section-2{
@@ -26,20 +24,15 @@
         /* Animation -- company-logos */
 
         .moveImage{
-            animation: moveCompanies 28s linear 0s infinite;
+            animation: moveCompanies 30s linear infinite;
         }
 
         @keyframes moveCompanies{
             0%{
                 top:0;
             }
-
-            50%{
-                top:-100%;
-            }
-
             100%{
-                top:-200%;
+                top:-100%;
             }
         }
 
@@ -57,6 +50,33 @@
             padding-top: 130px;
             padding-bottom: 110px;
         }
+
+        @media (max-width: 768px) {
+            .feature-section-2{
+                background-position: 60% 50%;
+                background-size: 700% 100%;
+            }
+
+            .feature-section-3{
+                background-size: 450% 100%;
+            }
+
+            .ctaSection{
+                background-size: 350% 190%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .ctaSection{
+                background-size: 200% 120%;
+            }
+        }
+
+        @media (max-width: 821) {
+            .break2{
+                display: block;
+            }
+        }
     </style>
 
     <!-- Google fonts link -->
@@ -64,21 +84,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/assets/index-8619926a.css">
+  <link rel="stylesheet" href="/assets/index-8738d028.css">
 </head>
-<body class="overflow-x-hidden relative w-full">
-    <div class="wrapper relative w-full">
+<body>
+    <div class="wrapper overflow-x-hidden">
         <!-- Navigation Bar -->
         <nav class="bg-deepBlue">
-            <div class="relative w-[1080px] mx-auto flex items-center justify-between">
+            <div class="max-w-[1110px] w-11/12 mx-auto flex items-center justify-between">
                 <!-- Razorpay logo -->
                 <a href="https://razorpay.com/" class="cursor-pointer py-7 pr-7">
                     <img src="/assets/logo-803a4a65.svg" alt="" width="125px" height="30px">
                 </a>
 
                 <!-- Links of nav-bar -->
-                <ul class="flex space-x-6 mr-6">
-                    <li class="text-[color:white] font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-200 relative group hidden lg:block">
+                <ul class="lg:flex lg:gap-6 items-center justify-between hidden">
+                    <li class="text-[color:white] font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-200 relative group">
                         <a href="#">
                             Payments
                         </a>
@@ -120,104 +140,112 @@
                     </li>
                 </ul>
 
-                <div class="flex gap-[0.9rem]">
-                    <img src="/assets/india-flag-62cf945b.svg" alt="" width="28px" height="20px">
-                    <button class="bg-deepBlue py-3 px-5 font-mullish text-[color:white] border-lightBlue border rounded-sm font-bold text-sm">
+                <div class="flex gap-3 items-center">
+                    <img src="/assets/india-flag-62cf945b.svg" alt="" width="28px" height="20px" class="hidden lg:block">
+                    <button class="py-3 px-5 font-mullish text-[color:white] border-lightBlue border rounded font-bold text-sm">
                         Log In
                     </button>
-                    <button class="py-3 px-4 font-mullish text-sm rounded-sm font-bold bg-[color:white] text-lightBlue300 border-[0.1px] transition-all duration-200 hover:text-lightBlue500 lg:flex">
-                        Sign Up
-                        <svg viewBox="0 0 24 24" focusable="false" class="w-[14px] h-[14px] ml-3 mt-0.5">
-                            <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
-                            </path>
-                        </svg>
+                    <button class="py-3 px-4 font-mullish text-sm rounded-sm font-bold bg-[color:white] text-lightBlue300 border transition-all duration-200 hover:text-lightBlue500 hidden lg:block">
+                        Sign Up &#10132;
                     </button>
+
+                    <!-- Hamburger -->
+                    <div class=" w-[18px] flex flex-col gap-1 ml-4 lg:hidden " >
+                        <div class="bg-[color:white] w-full h-[1.2px]" ></div>
+                        <div class="bg-[color:white] w-full h-[1.2px]" ></div>
+                        <div class="bg-[color:white] w-full h-[1.2px]" ></div>
+                    </div>
                 </div>
             </div>
         </nav>
 
         <!-- Hero Section -->
-        <section class="relative bg-deepBlue">
-            <div class="flex width:10/12 flex-row justify-between items-center mx-auto max-w-[1080px]">
+        <section class="relative bg-deepBlue w-full">
+            <div class="flex w-11/12 flex-col lg:flex-row justify-between items-center mx-auto max-w-[1080px]">
                 <!-- Left part -->
-                <div class="space-y-8 tracking-wide">
+                <div class="space-y-8">
                     <h1 class="text-[color:white] font-mullish font-extrabold text-[40px] leading-[1.2]">
                         Power your finance, grow your business
                     </h1>
                     <div class="bg-greenLight w-6 h-1">
                     </div>
-                    <p class="text-[color:white] font-mullish text-[18px] leading-7 opacity-60">
+                    <p class="text-[color:white] font-mullish text-[18px] leading-7 opacity-70">
                         Accept payments from customers. Automate payouts to vendors & employees. Never run out of working capital.
                     </p>
-                    <button class="text-[color:white] bg-lightBlue rounded font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200 py-[14px] px-[18px]">
+                    <button class="text-[color:white] bg-lightBlue rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200 py-[14px] px-[18px]">
                         Sign Up Now
                     </button>
                 </div>
                 <!-- Right part -->
-                <img src="/assets/hero-illustration-783a8736.jpg" alt="" class="w-full max-w-[680px]">
+                <img src="/assets/hero-illustration-783a8736.jpg" alt="" class="w-full lg:max-w-[670px] mt-32 mb-12 md:my-0">
             </div>
 
             <!-- Shape part -->
-            <div class="absolute left-0 right-0 w-[100.1%]">
+            <div class="absolute left-0 right-0 w-[103%]">
                 <!-- Left-0 + Right-0  =>  Stretched fully -->
-                <img src="/assets/hero-shape-55e07e29.svg" alt="" class="w-full object-fill">
+                <img src="/assets/hero-shape-55e07e29.svg" alt="" class="w-[103%] object-fill">
             </div>
         </section>
 
         <!-- Feature section --> 
-        <section class="relative mt-[190px] overflow-hidden">
-            <img src="data:image/png;base64,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" alt="" loading="lazy" width="233" height="167" class="absolute -top-[8rem] left-[10rem] inline-block">
-            <img src="data:image/png;base64,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" alt="" loading="lazy" width="233" height="167" class="absolute top-[3rem] right-0 inline-block rotate-180">
+        <section class="relative mt-[190px] w-full px-8 xl:px-0">
+            <img src="data:image/png;base64,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" alt="" loading="lazy" width="233" height="167" class="absolute -top-[8rem] left-[10rem] hidden lg:inline-block">
+            <img src="data:image/png;base64,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" alt="" loading="lazy" width="233" height="167" class="absolute top-[3rem] right-0 hidden lg:inline-block rotate-180">
 
             <!-- Sub-container -->
             <div class="relative w-11/12 max-w-[1080px] mx-auto pt-4">
-                <!-- Heading -->
-                <h2 class="font-mullish text-center text-2xl leading-[1.2] font-bold">
+                <!-- Heading (for large width) -->
+                <h2 class="font-mullish text-center text-2xl leading-[1.2] font-extrabold hidden md:block">
                     Accept Payments with Razorpay Payment Suite
+                </h2>
+                <!-- Heading (for small widths) -->
+                    <!-- ..Shown using reverse media queries -->
+                <h2 class="font-mullish text-center text-[40px] leading-[1.2] font-extrabold block md:hidden px-10">
+                    Explore Razorpay Payment Suite
                 </h2>
                 <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-6">
                 </div>
 
                 <!-- Content box (bordered) -->
-                <div class="w-full min-h-[520px] bg-[color:white] flex rounded-md relative p-10 py-12 border-2 border-borderGray/25 z-10 mt-20 tracking-wide">
+                <div class="w-full min-h-[500px] bg-[color:white] flex rounded-md relative px-8 py-10 md:border md:border-borderGray/25 lg:px-12 lg:my-20">
                     <!-- Left section -->
                     <div class="flex flex-col justify-between w-full">
-                        <h3 class="font-mullish text-[28px] leading-10 font-bold max-w-[500px]">
+                        <h3 class="font-mullish md:text-[28px] leading-12 font-bold md:max-w-[500px] text-[20px] max-w-[75%] max-[508px]:mb-8">
                             Supercharge your business with the all-powerful 
                             <span class="text-lightBlue">Payment Gateway</span>
                         </h3>
-                        <ul class="space-y-2 opacity-90">
-                            <li class="font-mullish flex items-center space-x-2">
+                        <ul class="space-y-2 max-[508px]:mb-6">
+                            <li class="font-mullish flex items-center gap-1 lg:gap-4">
                                 <i data-feather="check" class="text-greenLight"></i>
                                 <span>
                                     100+ Payment Methods
                                 </span>
                             </li>
-                            <li class="font-mullish flex items-center space-x-2">
+                            <li class="font-mullish flex items-center gap-1 lg:gap-4">
                                 <i data-feather="check" class="text-greenLight"></i>
                                 <span>
                                     Industry Leading Success Rate
                                 </span>
                             </li>
-                            <li class="font-mullish flex items-center space-x-2">
+                            <li class="font-mullish flex items-center gap-1 lg:gap-4">
                                 <i data-feather="check" class="text-greenLight"></i>
                                 <span>
                                     Superior Checkout Experience
                                 </span>
                             </li>
-                            <li class="font-mullish flex items-center space-x-2">
+                            <li class="font-mullish flex items-center gap-1 lg:gap-4">
                                 <i data-feather="check" class="text-greenLight"></i>
                                 <span>
                                     Easy to Integrate
                                 </span>
                             </li>
-                            <li class="font-mullish flex items-center space-x-2">
+                            <li class="font-mullish flex items-center gap-1 lg:gap-4">
                                 <i data-feather="check" class="text-greenLight"></i>
                                 <span>
                                     Instant Settlements from day 1
                                 </span>
                             </li>
-                            <li class="font-mullish flex items-center space-x-2">
+                            <li class="font-mullish flex items-center gap-1 lg:gap-4">
                                 <i data-feather="check" class="text-greenLight"></i>
                                 <span>
                                     In-depth Reporting and Insights
@@ -225,27 +253,28 @@
                             </li>
                         </ul>
 
-                        <div class="flex flex-row items-center space-x-4">
-                            <button class="bg-lightBlue w-fit text-[color:white] py-[14px] px-[18px] rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200">
-                                Sign Up Now
+                        <!-- Button & Link part -->
+                        <div class="flex items-stretch gap-4 flex-col-reverse md:flex-row md:items-center">
+                            <button class="bg-lightBlue md:w-fit text-[color:white] py-[14px] px-[18px] rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200 w-full">
+                                Sign Up Now &#10132;
                             </button>
                             <!-- Hyperlink -->
-                            <div class="flex items-center cursor-pointer group">
-                                <a href="#" class="font-mullish font-bold text-lightBlue500 group-hover:text-grayBlue transition-all duration-200">
+                            <a href="#" class="flex items-center cursor-pointer group">
+                                <div class="font-mullish font-bold text-lightBlue500 group-hover:text-grayBlue transition-all duration-200">
                                     Know More
-                                </a>
+                                </div>
                                 <i data-feather="chevron-right" class="text-lightBlue500 w-5 h-5 group-hover:text-grayBlue transition-all duration-200">
                                 </i>
-                            </div>
+                            </a>
                         </div>                
                     </div>
 
                     <!-- Right section -->
-                    <img src="/assets/payment-suite-f883499d.png" alt="" class="max-w-[600px] absolute right-0 bottom-0" />
+                    <img src="/assets/payment-suite-f883499d.png" alt="" class="lg:max-w-[600px] md:max-w-[400px] hidden md:block absolute right-0 bottom-0 md:mr-8 lg:mr-0" />
                 </div>
 
                 <!-- Cards (Grid - 2x3) -->
-                <div class="grid grid-cols-3 gap-8 mt-16 tracking-wide">
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
                     <!-- Box 1 -->
                     <div class="w-full min-h-[15rem] relative cursor-pointer">
                         <img src="/assets/payment-link-icon-68c91ae5.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[8] transition-all duration-200">
@@ -483,10 +512,10 @@
                 </div>
 
                 <!-- Doubt section -->
-                <div class="border rounded-md px-4 py-4  border-[color:#bad8fa] bg-gradient-to-b from-color1 to-color3 mt-4">
+                <div class="border rounded-md px-4 py-4  border-[color:#bad8fa] bg-gradient-to-b from-color1 to-color3 mt-4 md:pb-0 mb-[-10rem]">
                     <!-- Content (in a shrinked width) -->
                     <div class="w-[80%] mx-auto">
-                        <p class="font-mullish flex items-center align-middle justify-center text-sm gap-[0.65rem] opacity-80 tracking-wide">
+                        <p class="font-mullish flex md:flex-row md:items-center md:align-middle md:justify-center text-sm gap-[0.65rem] opacity-80 tracking-wide flex-col items-start">
                             <span class="font-bold text-deepBlue">
                                 Not sure which product to choose?
                             </span>
@@ -502,36 +531,48 @@
                             </span>
                         </p>
                     </div>
-                    
                 </div>
             </div>
         </section>
 
         <!-- Feature section 2 -->
-        <section class="bg-[url(images/feature2-background1.svg)] bg-no-repeat pb-[460px] mt-14 pt-[13rem] bg-cover  feature-section-2 -mb-20">
+        <section class="bg-[url(images/feature2-background1.svg)] bg-no-repeat pb-[500px] mt-14 pt-[11rem] feature-section-2 px-8 xl:px-0">
             <!-- pb-[500px] mt-28 pt-[13rem] -->
-            <div class="relative w-11/12 max-w-[1080px] mx-auto pt-4">
-                <h2 class="font-mullish text-center text-2xl leading-[1.2] font-bold text-[color:white]">
+            <div class="relative w-11/12 max-w-[1080px] mx-auto pt-12 mt-8">
+                <!-- Heading (for large width) -->
+                <h2 class="font-mullish text-center text-2xl leading-[1.2] font-bold text-[color:white] md:block hidden">
                     Explore RazorpayX powered Business Banking
                 </h2>
-                <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-6">
+                <!-- Heading (for small width) -->
+                <h2 class="font-mullish flex-col items-start font-extrabold text-[2.5rem] leading-[1.2] md:hidden block -ml-8 md:ml-0">
+                    <p class="text-[color:white]">Explore</p>
+                    <img src="/assets/razorpayX-dbf3ba53.svg" alt="" loading="lazy" class="w-[13rem]">
+                    <p class="text-greenLight">Business <br> Banking</p>
+                </h2>
+
+                <div class="w-6 h-1 bg-greenLight md:mx-auto mt-4 mb-6 -ml-8">
                 </div>
 
                 <!-- Main feature box -->
-                <div class="relative w-full min-h-[440px] flex flex-col ">
-                    <img src="/assets/x-flame-1-12c499a3.png" alt="" class="absolute -top-[62px] -left-[140px] w-[200px]" loading="lazy">
-                    <img src="/assets/x-flame-2-9092ee28.png" alt="" class="absolute top-[250px] -right-[180px] w-[270px]" loading="lazy">
+                <div class="relative w-full md:min-h-[440px] min-h-[400px] flex flex-col gap-8 md:mt-20 -mt-4">
+                    <img src="/assets/x-flame-1-12c499a3.png" alt="" class="absolute hidden md:block -top-[86px] -left-[140px] w-[200px]" loading="lazy">
+                    <img src="/assets/x-flame-2-9092ee28.png" alt="" class="absolute -top-[250px] md:top-[250px] -right-[140px] md:-right-[180px] w-[270px]" loading="lazy">
 
                     <!-- Content box 2 (bordered) -->
-                    <div class="w-full min-h-[520px] text-[color:white] bg-[color:#181c2e] flex rounded-lg relative p-10 py-12 border-2 border-borderGray/25 z-10 mt-14 tracking-wide">
+                    <div class="w-full min-h-[520px] text-[color:white] bg-[color:#181c2e] flex rounded-lg relative p-10 py-12 md:border-2 md:border-borderGray/25 z-10 mt-14 tracking-wide">
                         <!-- Left section -->
-                        <div class="flex flex-col justify-between w-full">
-                            <h3 class="font-mullish text-[28px] leading-10 font-bold max-w-[500px]">
+                        <div class="flex flex-col justify-between w-full -ml-4 md:ml-0">
+                            <!-- Sub-heading (large width) -->
+                            <h3 class="font-mullish text-[28px] leading-10 font-bold max-w-[500px] hidden md:block">
                                 Manage your Company's finances and supercharge your business banking with 
                                 <img src="/assets/razorpayX-dbf3ba53.svg" alt="" loading="lazy" width="168px" height="32px" class="inline">
                             </h3>
-                            <!-- List -->
-                            <ul class="space-y-2 opacity-90">
+                            <!-- Sub-heading (small width) -->
+                            <h3 class="font-mullish text-[20px] leading-7 font-extrabold max-w-[700px] md:hidden block mb-6">
+                                Open and operate <br> fully-functional Current Accounts on RazorpayX
+                            </h3>
+                            <!-- List (large width) -->
+                            <ul class="space-y-2 opacity-90 hidden md:block">
                                 <li class="font-mullish flex items-center space-x-2">
                                     <i data-feather="check" class="text-greenLight"></i>
                                     <span>
@@ -558,11 +599,45 @@
                                 </li>
                             </ul>
 
-                            <div class="flex flex-row items-center space-x-4 w-full">
-                                <button class="relative bg-lightBlue flex items-center justify-start text-[color:white] py-[14px] px-[18px] md:pr-[90px] rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200">
+                            <!-- List (small width) -->
+                            <ul class="space-y-2 opacity-90 mb-4 block md:hidden">
+                                <li class="font-mullish flex items-center space-x-2">
+                                    <i data-feather="check" class="text-greenLight"></i>
+                                    <span>
+                                        Business Banking for disruptors
+                                    </span>
+                                </li>
+                                <li class="font-mullish flex items-center space-x-2">
+                                    <i data-feather="check" class="text-greenLight"></i>
+                                    <span>
+                                        All standard banking features
+                                    </span>
+                                </li>
+                                <li class="font-mullish flex items-center space-x-2">
+                                    <i data-feather="check" class="text-greenLight"></i>
+                                    <span>
+                                        Tech capabilities like API Banking
+                                    </span>
+                                </li>
+                                <li class="font-mullish flex items-center space-x-2">
+                                    <i data-feather="check" class="text-greenLight"></i>
+                                    <span>
+                                        Insightful Reports
+                                    </span>
+                                </li>
+                                <li class="font-mullish flex items-center space-x-2">
+                                    <i data-feather="check" class="text-greenLight"></i>
+                                    <span>
+                                        Multiple Payout flow options
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <div class="flex md:flex-row flex-col-reverse items-stretch w-full md:items-center gap-5">
+                                <button class="relative bg-lightBlue flex items-center justify-center text-[color:white] py-[12px] px-[18px] pr-[90px] rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200">
                                     Sign Up
                                     <!-- Green strap -->
-                                    <div class="w-12 h-[60px] bg-greenLight absolute right-6 skew-x-[20deg] flex justify-center items-center">
+                                    <div class="w-12 h-[57px] bg-greenLight absolute md:right-6 right-[calc(50%-4.5rem)] skew-x-[20deg] flex justify-center items-center">
                                         <!-- Arrow -->
                                         <svg viewBox="0 0 24 24" focusable="false" class="w-[20px] h-[20px] -skew-x-[20deg]">
                                             <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
@@ -570,7 +645,7 @@
                                     </div>
                                 </button>
                                 <!-- Hyperlink -->
-                                <div class="flex items-center cursor-pointer group">
+                                <div class="flex gap-2 items-center cursor-pointer group">
                                     <a href="#" class="font-mullish font-bold text-lightBlue500 group-hover:text-grayBlue transition-all duration-200">
                                         Know More
                                     </a>
@@ -581,13 +656,13 @@
                         </div>
 
                         <!-- Right section -->
-                        <img src="/assets/buisness-banking-f8dca509.png" alt="" class="max-w-[600px] absolute right-0 bottom-0" loading="lazy" />
+                        <img src="/assets/buisness-banking-f8dca509.png" alt="" class="lg:max-w-[600px] md:max-w-[400px] absolute right-0 bottom-0 md:block hidden" loading="lazy" />
                     </div>
 
                     <!-- Cards (Grid - 1x3) -->
-                    <div class="grid grid-cols-3 gap-8 mt-14 tracking-wide w-full">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-52 md:my-8 w-full">
                         <!-- Box 1 -->
-                        <div class="w-full min-h-[15rem] relative cursor-pointer featureCard2">
+                        <div class="w-full min-h-[15rem] relative cursor-pointer">
                             <img src="/assets/current-icon-0df323eb.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[8] transition-all duration-200 featureCardIcon">
                             <!-- Box shape -->
                             <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#525a76] h-full w-full absolute z-[9] transition-all duration-200 featureCardSVG" style="stroke-opacity: 0.8">
@@ -706,7 +781,7 @@
                     </div>
 
                     <!-- Demo box -->
-                    <div class="flex justify-evenly items-center w-full mt-16 mb-24 border px-4 py-[1.75rem] gap-y-6 relative rounded-md border-[color:#525a76]">
+                    <div class="hidden lg:flex justify-evenly items-center w-full mt-16 mb-24 border px-4 py-[1.75rem] gap-y-6 relative rounded-md border-[color:#525a76]">
                         <p class="font-mullish text-[color:white] text-xl opacity-90 mr-5">
                             Check out the live demo to learn how RazorpayX works.
                             <span class="font-bold">
@@ -726,21 +801,20 @@
                         </button>
                     </div>
                 </div>
-                
             </div>
         </section>
 
         <!-- New Features section -->
-        <section class="relative bg-[color:white]">
-            <div class="relative w-11/12 max-w-[1080px] mx-auto">
-                <img src="data:image/png;base64,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" alt="" class="absolute w-[233px] left-[300px] -top-[6rem] z-[2]" loading="lazy">
-                <img src="data:image/png;base64,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" alt="" class="absolute w-[233px] -right-[3.5rem] -top-[6rem] z-[2]" loading="lazy">
+        <section class="relative bg-[color:white] w-full -mt-[35rem] md:-mt-36 px-8 xl:px-0 pt-2 -mb-[10rem] md:mb-0">
+            <div class="relative w-11/12 max-w-[1080px] mx-auto pt-4 mt-8">
+                <img src="data:image/png;base64,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" alt="" class="absolute w-[233px] left-[300px] -top-[6rem] -z-10 hidden lg:block" loading="lazy">
+                <img src="data:image/png;base64,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" alt="" class="absolute w-[233px] -right-[3.5rem] -top-[6rem] -z-10 hidden lg:block" loading="lazy">
 
                 <!-- Grid (2 x 3) -->
-                <div class="grid grid-cols-3 font-mullish w-full gap-y-10 gap-x-4 relative bg-[color:transparent] tracking-wide">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 font-mullish w-full gap-y-10 gap-x-4 relative bg-[color:transparent] tracking-wide z-20">
                     <!-- item 1 -->
-                    <div class="relative flex items-center z-[1] bg-opacity-0">
-                        <h2 class="font-extrabold text-4xl leading-[3.375rem]">
+                    <div class="relative flex items-center z-0 py-3 md:py-4 lg:py-6">
+                        <h2 class="font-extrabold text-[40px] text-deepBlue leading-[3.375rem] max-w-[80%]">
                             New in the 
                             <span class="text-lightBlue500">
                                 Razorpay 
@@ -749,7 +823,7 @@
                         </h2>
                     </div>
                     <!-- card 1 -->
-                    <div class="p-10 bg-[url(images/instant-settlement-bg.svg)] w-full max-h-[300px] cursor-pointer bg-cover bg-no-repeat hover:scale-105 transition-all duration-100 hover:bg-cover hover:bg-[url(images/instant-settlement-bghover.svg)] z-[4] bg-[color:white] shadow-lg shadow-grayShadow">
+                    <div class="p-10 bg-[url(images/instant-settlement-bg.svg)] w-full max-h-[300px] hover:cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-100 hover:bg-[url(images/instant-settlement-bghover.svg)] bg-[color:white] shadow-lg shadow-grayShadow py-3 md:py-4 lg:py-6">
                         <img src="/assets/instant-settlement-icon-2a2733e0.svg" alt="" class="w-10 h-10 bg-brightBlue rounded-full" loading="lazy">
                         <h3 class="font-bold text-lg pt-4">
                             Instant Settlements
@@ -767,7 +841,7 @@
                         </div>
                     </div>
                     <!-- card 2 -->
-                    <div class="p-10 bg-[url(images/upi-autopay-bg.svg)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-100 hover:bg-[url(images/upi-autopay-hoverbg.svg)] z-[4] bg-[color:white] shadow-lg shadow-grayShadow">
+                    <div class="p-10 bg-[url(images/upi-autopay-bg.svg)] w-full max-h-[300px] hover:cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-100 hover:bg-[url(images/upi-autopay-hoverbg.svg)] bg-[color:white] shadow-lg shadow-grayShadow py-3 md:py-4 lg:py-6">
                         <img src="/assets/upi-autopay-icon-ef2b7f92.svg" alt="" class="w-10 h-10 bg-brightBlue rounded-full">
                         <h3 class="font-bold text-lg pt-4" loading="lazy">
                             UPI AutoPay
@@ -785,7 +859,7 @@
                         </div>
                     </div>
                     <!-- card 3 -->
-                    <div class="p-10 bg-[url(images/payment-button-bg.svg)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200 hover:bg-[url(images/payment-button-hoverbg.svg)] z-[4] bg-[color:white] shadow-lg shadow-grayShadow">
+                    <div class="p-10 bg-[url(images/payment-button-bg.svg)] w-full max-h-[300px] hover:cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-100 hover:bg-[url(images/payment-button-hoverbg.svg)] bg-[color:white] shadow-lg shadow-grayShadow py-3 md:py-4 lg:py-6">
                         <img src="/assets/payment-button-icon-6c5f8aa4.svg" alt="" class="w-10 h-10 bg-brightBlue rounded-full" loading="lazy">
                         <h3 class="font-bold text-lg pt-4">
                             Payment Button
@@ -803,7 +877,7 @@
                         </div>
                     </div>
                     <!-- card 4 -->
-                    <div class="p-10 bg-[url(images/qr-code-bg.svg)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200 hover:bg-[url(images/qr-code-hoverbg.svg)] z-[4] bg-[color:white] shadow-lg shadow-grayShadow">
+                    <div class="p-10 bg-[url(images/qr-code-bg.svg)] w-full max-h-[300px] hover:cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-100 hover:bg-[url(images/qr-code-hoverbg.svg)] bg-[color:white] shadow-lg shadow-grayShadow py-3 md:py-4 lg:py-6">
                         <img src="/assets/qr-code-icon-238a35f8.svg" alt="" class="w-10 h-10" loading="lazy">
                         <h3 class="font-bold text-lg pt-4">
                             QR Codes
@@ -821,7 +895,7 @@
                         </div>
                     </div>
                     <!-- card 5 -->
-                    <div class="p-10 bg-[url(images/magic-checkout-bg.svg)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200 hover:bg-[url(images/magic-checkout-hoverbg.svg)] z-[4] bg-[color:white] shadow-lg shadow-grayShadow">
+                    <div class="p-10 bg-[url(images/magic-checkout-bg.svg)] w-full max-h-[300px] hover:cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-100 hover:bg-[url(images/magic-checkout-hoverbg.svg)] bg-[color:white] shadow-lg shadow-grayShadow py-3 md:py-4 lg:py-6">
                         <img src="/assets/magic-checkout-a61eda6c.svg" alt="" class="w-10 h-10" loading="lazy">
                         <h3 class="font-bold text-lg pt-4">
                             Magic Checkout
@@ -843,99 +917,99 @@
         </section>
 
         <!-- Features section 3 -->
-        <section class="w-full bg-[url(images/core-features-sectionBg.svg)] bg-no-repeat bg-cover mt-14 relative text-[color:white] feature-section-3">
-            <div class="w-11/12 relative max-w-[1080px] mx-auto pt-4">
+        <section class="w-full bg-[url(images/core-features-sectionBg.svg)] bg-no-repeat bg-cover relative text-[color:white] feature-section-3 md:pt-40 md:py-[10rem] pt-[25rem] pb-[20rem] px-8 xl:px-0">
+            <div class="w-full lg:w-11/12 relative max-w-[1080px] text-left md:mx-auto pt-16 md:pt-2">
                 <!-- Heading part -->
                 <div>
-                    <h2 class="font-mullish font-extrabold text-2xl text-center text-[color:white]">
+                    <h2 class="font-mullish font-extrabold text-2xl md:text-center text-[color:white]">
                         Features
                     </h2>
-                    <div class="w-6 h-1 bg-greenLight mx-auto mt-[0.8rem] mb-4">
+                    <div class="w-6 h-1 bg-greenLight md:mx-auto mt-4 mb-8">
                     </div>
-                    <p class="font-mullish text-center mx-auto max-w-[450px] text-[color:white] tracking-wide">
+                    <p class="font-mullish text-left md:text-center md:mx-auto max-w-[450px] text-[color:white] tracking text-[0.95rem] opacity-90">
                         Empower your business with all the right tools to accept online payments and provide the best customer experience
                     </p>
                 </div>
 
                 <!-- Grid (2x4) -->
-                <div class="grid grid-cols-4 font-mullish gap-[2rem] mt-8">
+                <div class="grid grid-cols-1 lg:grid-cols-4 font-mullish gap-[2rem] mt-8 w-[90%] mx-auto">
                     <!-- Card 1 -->
                     <div class="">
                         <img src="/assets/instant-activation-icon-5dc1b16b.svg" alt="" loading="lazy">
-                        <h3 class="font-bold text-lg my-4">
+                        <h3 class="font-bold text-lg lg:my-4 my-1">
                             Instant Activation
                         </h3>
-                        <p class="opacity-80 ">
+                        <p class="opacity-80 tracking text-[0.95rem]">
                             Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.
                         </p>
                     </div>
                     <!-- Card 2 -->
                     <div class="">
                         <img src="/assets/easy-integration-icon-af325608.svg" alt="" loading="lazy">
-                        <h3 class="font-bold text-lg my-4">
+                        <h3 class="font-bold text-lg lg:my-4 my-1">
                             Easy Integration
                         </h3>
-                        <p class="opacity-80 ">
+                        <p class="opacity-80 tracking text-[0.95rem]">
                             With plugins for all major platforms and languages, integrate and go live with Razorpay in less than an hour.
                         </p>
                     </div>
                     <!-- Card 3 -->
                     <div class="">
                         <img src="/assets/api-driven-icon-f4b24f36.svg" alt="" loading="lazy">
-                        <h3 class="font-bold text-lg my-4">
+                        <h3 class="font-bold text-lg lg:my-4 my-1">
                             API Driven
                         </h3>
-                        <p class="opacity-80">
+                        <p class="opacity-80 tracking text-[0.95rem]">
                             Build your business for scale with our complete API-driven automation that requires zero manual intervention.
                         </p>
                     </div>
                     <!-- Card 4 -->
                     <div class="">
                         <img src="/assets/payment-modes-icon-746c757f.svg" alt="" loading="lazy">
-                        <h3 class="font-bold text-lg my-4">
+                        <h3 class="font-bold text-lg lg:my-4 my-1">
                             100+ payment modes
                         </h3>
-                        <p class="opacity-80 ">
+                        <p class="opacity-80 tracking text-[0.95rem]">
                             Offer your customers the luxury of all payment modes including Credit/Debit cards, Netbanking, UPI, Wallets etc.
                         </p>
                     </div>
                     <!-- Card 5 -->
                     <div class="">
                         <img src="/assets/simple-pricing-icon-ef5880b2.svg" alt="" loading="lazy">
-                        <h3 class="font-bold text-lg my-4">
+                        <h3 class="font-bold text-lg lg:my-4 my-1">
                             Simple Pricing
                         </h3>
-                        <p class="opacity-80 ">
+                        <p class="opacity-80 tracking text-[0.95rem]">
                             Our innovative payment solutions with competitive pricing make payments simpler.
                         </p>
                     </div>
                     <!-- Card 6 -->
                     <div class="">
                         <img src="/assets/industry-support-icon-dfe9d1a9.svg" alt="" loading="lazy">
-                        <h3 class="font-bold text-lg my-4">
+                        <h3 class="font-bold text-lg lg:my-4 my-1">
                             Best in Industry Support
                         </h3>
-                        <p class="opacity-80 ">
+                        <p class="opacity-80 tracking text-[0.95rem]">
                             Always available email, phone and chat based support to help you in your every step.
                         </p>
                     </div>
                     <!-- Card 7 -->
                     <div class="">
                         <img src="/assets/dashboard-reporting-icon-9dc031ab.svg" alt="" loading="lazy">
-                        <h3 class="font-bold text-lg my-4">
+                        <h3 class="font-bold text-lg lg:my-4 my-1">
                             Dashboard Reporting
                         </h3>
-                        <p class="opacity-80 ">
+                        <p class="opacity-80 tracking text-[0.95rem]">
                             Real-time data and insights on your Razorpay Dashboard to make informed business decisions.
                         </p>
                     </div>
                     <!-- Card 8 -->
                     <div class="">
                         <img src="/assets/secure-icon-1eb94f5d.svg" alt="" loading="lazy">
-                        <h3 class="font-bold text-lg my-4">
+                        <h3 class="font-bold text-lg lg:my-4 my-1">
                             Secure
                         </h3>
-                        <p class="opacity-80 ">
+                        <p class="opacity-80 tracking text-[0.95rem]">
                             PCI DSS Level 1 compliant solution which removes your burden of regulatory compliance.
                         </p>
                     </div>
@@ -944,22 +1018,22 @@
         </section>
 
         <!-- Join Razorpay section -->
-        <section class="w-full bg-[color:#f5f8fe] relative pt-40 pb-2 -mt-[180px] z-[-100]">
-            <div class="w-11/12 max-w-[1080px] flex flex-row items-center justify-between mx-auto relative pointer-events-auto">
+        <section class="w-full bg-[color:#f5f8fe] relative md:pt-40 md:pb-12 md:-mt-[200px] z-[-10] -mt-[5rem]">
+            <div class="w-11/12 md:w-90 lg:w-11/12 max-w-[1080px] flex flex-col md:flex-row items-center md:justify-between mx-auto relative md:h-[530px] md:gap-14 gap-0">
                 <!-- Left part -->
-                <div class="font-mullish justify-center max-w-[calc(100%-500px)] tracking-wide">
-                    <h2 class="font-bold text-2xl opacity-[120%]">
+                <div class="flex flex-col font-mullish justify-center md:max-w-[450px]">
+                    <h2 class="font-extrabold text-2xl">
                         Join the 50,00,000 businesses using Razorpay
                     </h2>
-                    <div class="w-6 h-1 bg-greenLight mt-[0.65rem] mb-8">
+                    <div class="w-6 h-1 bg-greenLight my-4 mb-8">
                     </div>
-                    <p class="opacity-[85%]">
+                    <p class="opacity-[95%]">
                         We make it easier for you to focus on building great products while we work on simplifying your payments. Become one of us by joining thousands of our happy users and simplify the online payment experience for your customers.
                     </p>
-                    <p class="mt-8 opacity-[85%] mb-8">
+                    <p class="mt-8 opacity-[95%] mb-8">
                         Focus on your business while we handle the complexities of payments for you.
                     </p>
-                    <a href="" class="cursor-pointer">
+                    <a href="">
                         <button class="relative text-[color:white] bg-lightBlue rounded font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200 py-[14px] px-[18px] flex flex-row items-center justify-start gap-2 tracking-wide leading-[0.4rem] cursor-pointer">
                             Get Started
                             <!-- Arrow (span) -->
@@ -988,19 +1062,17 @@
         </section>
 
         <!-- Feedback section -->
-        <section class="relative mt-4 z-[-10]">
-            <div class="w-11/12 max-w-[1300px] mx-auto relative py-20 font-mullish">
+        <section class="w-full relative">
+            <div class="w-11/12 max-w-[1300px] mx-auto relative pt-20 pb-4 font-mullish">
+                <img src="data:image/png;base64,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" alt="" loading="lazy" class="absolute w-[200px] top-[8rem] left-[2rem] z-[-10] hidden lg:block">
+
                 <div>
-                    <h2 class="font-bold mx-auto text-center text-2xl">
+                    <h2 class="font-extrabold text-center text-2xl">
                         An Experience<br> People Love to Talk About
                     </h2>
                     <!-- Block div -->
-                    <div class="w-6 h-1 bg-greenLight mx-auto mt-[0.8rem] mb-4"></div>
-                </div>
+                    <div class="w-6 h-1 bg-greenLight text-center mx-auto my-4"></div>
 
-                <div class="mr-28">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOkAAACnCAMAAADDu4vNAAAAOVBMVEUAAADT5PnT5fjj4//S5PLS5PbS5Pja5/nY4vnT5/fR5PbV5frBzOXZ5/nR4/7T5PnP3/TS4vjV5vv5nSPYAAAAE3RSTlMATEIJEzkmHA4hKy8KFxw0MD49U7XcFQAAB5ZJREFUeNrt3ed22zAMBWDuKVqW3/9hO1ytACbIQnbTc3j/9euKIg/5RgTFzxgrpcpa7MHN/7THhRYRcz0Wv9iDsFk+48Qe22lxJ73a7WDLHyvQ1NHUHzOIhX4Lq/0+1Cwl+HJnxOxm+yEsm5XN1Gam0cJKut80ZfuherlHPHOVqdVc3exqCbF8mVkpwQmk7LafUnBS1cHMBbbBflKno02Iraf0bPKQu3iGsvSkiTKHWHyaRiwgZo52Y1g5HYGtHSk0TVlCzD0tIGYqRh29p03Br0zIRiPPX5/po5XXFigzTzNnS3KPh89kWZDnqWm0gJiu2IKYJExgBr+bSoiAvC6afnsgNiOWV/OIxX5LyGu5e2Hx8J6zxl1sCbHcbWKLRWwB33QxfbGowLWFcPKlPTQ0+05L0KbVxMHy02Zg+6NB+3m+m/V3d0stFi82x7D00kZGRkZGRkZGRl5n8t6828I/MnMwbffPPzULT3PQFGmmz24nWxBT0Api/mgBfgLa7VG3gthttRmxXDe3WkLMMU0r8MmZsrSZ7DaHWKxZQKwg5ne7IVaEiEhDkgkLiIlOmxGzjbYgpuq2nP9WQv4lh/xLsWKSsNuTJsoKYuZpGrFwtICaPGTua0Gnd7agsa8FLaRddqSp50hxC4y2uyCPB382e9Ej1TdaaX2k9pk+WkDNwT6VZQk12KDaj9sE3j1Ic2KNhKb7LSLmVwuImX4z+xvloVLELayWCZMVc7v5i83RpjO4KlstXmweXnE+MCvQrKEsIGaWL2ZMEHveZdNX0p+ykZGRkZGRkQvj092Ziy18sfjT9Fe73+MnrWy3FoA6azlafNrcaJljgjAnYXeZXpsTovOODr6JqqXVHnXLNbO72eOnDQ1uMeNZQMzvNiOWGs31mtstEj0gYTNilrAJ6/cqpi4ytBvsu8OO7gYnym6vLVBWsDvngIFukNEDEgZ6QNL43aDv7Ab5d73yu0H6nBbKDHnXsq+YIqz8MUmYAYb3gKHRNGoe/omjqdUcYeJNluudn220/PwlqJowWzaLSF/oG600mqmuJJA1U69sWmCnpjFTnRbbTN36LaxWEAuvzS9Sqr0/u8jCkab4y+5fTP20pI+mHWKZa+4gW332DUxfbiMjIyMjIyMXxqTHw940w8Tf2f3xmD9pDl5DilSx8BeWkf5xRsy2me60x29zyMrmVLVQtYzYvJmGn41Uv6nNRM30wdpX8Pl+s70WEXN1y6slxPKp1shI5zAzVmUujaYIm4jOr3NVpmzujGhjrLSlOqP+ldLQDGP1NKsbDP+2G7wzzp/jroiHBnvAitHd4Ez2gNAKafTz9NzvQdOvbfoba1kpzX89jsDI19QZsdxr+WwJnBbc8mYGsYCsbNZVW9pswkz9nTnQvdWvkUzdpvzHQrP1X/ssiKmnPRCzf0znRVknDsHN9FiENn+xgtkMzb8y32hFjIyMjIyM0OH3SMo6DQx2RgravcfEdTYr0EuVWYEeye8Gr4dog/2QQSwgnVHgdEbMayn8upfRLc2IWcSWzTRqsB+qmiZ7JENM0vtkj+QOxpjWlxFLQszkxD1+j6S4PdJudGcEjT+FT3Cm8H26Ryr/VY/kOFP4WN3gO3skz+iRzJU9Ev+5S/VIjG5JcHqk67slspvnWzqb634/De2T9Pjd0nRZt4T/rM0RnVHnz9qmVOmRNGmwH7KvzdZ6pGTVvHdBu8UvltvMcM0jfVOBdi+wM7obYMt9TOEbGRkZGRkZGakmmPCPTDeZYZnY4uD0OpGg6dxolmuPk4XXZuAEPxsQ0+eqcEbWt2TE0m5Bdpqr241hEbNTqwFmIeGmd3OIxW6T3VYQMzUzJ/NI8xGRDtghlt9ojPlWdjV1MHzi3kLMMSMMdMWSsOtnlsEWbTp3g998Ct+NsPYpfJa1ppg/he+d9w0WoYh14o5aE05P5psoK9wZkriF11P4DDldj7YZMUsaf+Legpg62QR6Utx03VLNAjJrwfRbrE3cK4j5s4W9E+2e1et7ze4Wsfm9veZajZjJrM62INP6FLSAmEGsKDitz7/ZdPEeXGgXX4D5vzeDm/mAjbp3ZGRkZGTk0pjoiv5GJlDjJ1g4Dc9gtjwNXOXhligrT3Mnk9DibrwUcIWP220zAe2xm7vCMmq8aNU9cW9GLL3rk5zfLQpOztP1GDZ9YjcOTugpfIzdODg7dNzQ1oSRb7tDB2bxWxzpflTvnMLHiT39j9AiNXGvf4cOaM3NNifx0h068El6qdFmqgfkBfnJ0sQ2elqflv121RtqbrTUP5kvtJqEVnbjZkoK7pSRf5nFrCBm/s5kr/ETzAQtYCa+jY2MjIyMjIz8o8S7TTfECsNMgzloGrEAjPdpRukPW3qaRWxGLGvBjJNrQpsp3W2p0fJmAjNetNyiEHvUdt4wiPlrLCOWPtMNzkdjrMoMu/VP3GNFXbvSVjCm8Gl69TQj/+MOHX+Xb7FDR9ztQ92gZ1hp3KHDEEbsxsGIQXbe8IQR0/XeZVbwMiNPA7uZb7Sy2ULsvAGtfQU0L1OGz/dpRsw+SR1ML5h17rxREDOIBcGOt0qqFBDTF5qUymEmaFtW4+QHdW+CRelCpzcAAAAASUVORK5CYII=" alt="" loading="lazy" class="absolute w-[200px] top-[8rem] left-[2rem] z-[-10]">
-    
                     <!-- Left Arrow-button -->
                     <button class="absolute rounded-full w-[100px] h-[100px] left-0 top-1/2 bg-[color:#f4f8ff] flex justify-center items-center">
                         <div class="w-[67%] h-[67%] bg-[color:#f4f8ff] rounded-full flex justify-center items-center mix-blend-multiply">
@@ -1018,26 +1090,36 @@
                     </button>
 
                     <!-- Main-content -->
-                    <div class="flex flex-row items-center justify-around max-w-[960px] mx-auto my-20">
+                    <div class="flex flex-col lg:flex-row items-center justify-center max-w-[960px] mx-auto w-90 lg:my-20 lg:gap-20 gap-8 mt-10 mb-[12.5rem]">
                         <!-- Celeb-image -->
-                        <img src="/assets/unacademy-employee-ae6fb56c.png" alt="" class="rounded-xl h-[320px] w-[320px] mr-8" loading="lazy">
+                        <img src="/assets/unacademy-employee-ae6fb56c.png" alt="" class="rounded-xl lg:h-[320px] lg:w-[300px] h-[250px] w-[250px]" loading="lazy">
     
                         <!-- text-content -->
-                        <div class="max-w-[450px]">
-                            <img src="/assets/quotes-38b97044.svg" alt="" loading="lazy" class="w-[35px] h-[40px] -mb-2">
-                            <h1 class="text-left text-3xl font-thin opacity-70 capitalize">
-                                Acquire customers from new <br> customer segments
-                            </h1>
-                            <a href="" class="opacity-40 italic underline font-thin capitalize">
-                                Learn more
-                            </a>
-                            <h2 class="font-[820] text-2xl">
-                                Subham Kumar
-                            </h2>
-                            <p class="font-medium">
-                                Product Manager
-                            </p>
-                            <img src="/assets/unacademy-logo-0884e662.svg" alt="" class="w-[210px] h-[75px]" loading="lazy">
+                        <div class="max-w-[450px] flex lg:flex-col flex-col-reverse text-center lg:text-left lg:items-start">
+                            <div class="flex flex-col items-start -ml-10">
+                                <img src="/assets/quotes-38b97044.svg" alt="" loading="lazy" class="w-[35px] h-[40px] -mb-2">
+                                <!-- Para (large width) -->
+                                <h1 class="font-mullish text-left text-3xl font-thin leading-[2.75rem] opacity-90 capitalize hidden lg:block">
+                                    Acquire customers from new <br> customer segments
+                                </h1>
+                                <!-- Para (small width) -->
+                                <h1 class="font-mullish text-left text-3xl font-thin leading-[2.75rem] opacity-90 capitalize block lg:hidden">
+                                    Acquire customers from <br> new customer segments
+                                </h1>
+                                <a href="" class="opacity-40 italic underline text-left font-thin capitalize">
+                                    Learn more
+                                </a>
+                            </div>
+                            
+                            <div class="flex flex-col items-center lg:items-start">
+                                <h2 class="font-[820] text-2xl">
+                                    Subham Kumar
+                                </h2>
+                                <p class="font-semibold mt-1 mb-0">
+                                    Product Manager
+                                </p>
+                                <img src="/assets/unacademy-logo-0884e662.svg" alt="" class="w-[210px] h-[75px] mx-auto lg:mx-0" loading="lazy">
+                            </div>
                         </div>
                     </div>
                         
@@ -1064,11 +1146,15 @@
                     </div>
                 </div>
 
+                <div class="mr-28">
+                    
+                </div>
+
             </div>   
         </section>
 
         <!-- Supercharge section -->
-        <section class="relative bg-[url(images/CTABg.svg)] w-full h-full bg-no-repeat bg-cover ctaSection">
+        <section class="relative bg-[url(images/CTABg.svg)] w-full h-full bg-no-repeat md:bg-cover bg-center ctaSection pt-[250px] pb-[150px] md:pt-0 md:pb-0">
             <div class="font-mullish w-11/12 max-w-[1080px] flex relative flex-row items-center justify-center space-x-20 mx-auto">
                 <!-- Left part -->
                 <div>
@@ -1080,7 +1166,7 @@
                     <p class="text-[color:white] mb-8 mt-6">
                         Sign up now to experience the future of payments and offer <br> your customers the best checkout experience.
                     </p>
-                    <ul class="flex flex-wrap flex-row items-center gap-4 space-y-2 text-[color:white] max-w-[700px]">
+                    <ul class="flex flex-wrap flex-row items-center md:gap-4 gap-[0.1rem] space-y-2 text-[color:white] max-w-[700px] -mt-2 md:mt-0">
                         <!-- item 1 -->
                         <li class="flex items-center gap-4">
                             <!-- tick icon -->
@@ -1111,7 +1197,7 @@
                         </li>
                     </ul>
                     <!-- button -->
-                    <button class="py-3 px-4 font-mullish text-sm rounded-sm font-bold bg-[color:white] text-lightBlue300 border-[0.1px] transition-all duration-200 hover:text-lightBlue500 lg:flex mt-6">
+                    <button class="py-3 px-4 font-mullish text-sm rounded-sm font-bold bg-[color:white] text-lightBlue300 border-[0.1px] transition-all duration-200 hover:text-lightBlue500 flex mt-6">
                         Sign Up Now
                         <svg viewBox="0 0 24 24" focusable="false" class="w-[14px] h-[14px] ml-3 mt-0.5">
                             <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
@@ -1120,15 +1206,15 @@
                     </button>
                 </div>
                 <!-- Right part -->
-                <img src="/assets/ctaImg-e340b144.svg" alt="" class="w-[240px] h-[282px] " loading="lazy">
+                <img src="/assets/ctaImg-e340b144.svg" alt="" class="w-[240px] h-[282px] hidden lg:block" loading="lazy">
             </div>
         </section>
 
         <!-- Footer section -->
-        <section class="relative w-full pb-10">
-            <div class="relative w-11/12 max-w-[1080px] mx-auto font-mullish flex flex-row justify-around">
-                <!-- column 1 -->
-                <div class="w-[23%] max-w-[340px] mt-[2.5rem] flex flex-col gap-1">
+        <section class="relative w-full bg-gradient-to-t from-[color:#edf8fe] to-[color:white]">
+            <div class="relative w-11/12 max-w-[1080px] mx-auto font-mullish flex flex-col lg:flex-row gap-10 mb-10 pl-4">
+                <!-- Left part -->
+                <div class="max-w-[340px] flex flex-col gap-3">
                     <img src="/assets/logo-dark-e6c30c29.svg" alt="" loading="lazy" class="w-[120px] h-[24px]">
                     <p class="text-sm text-[color:#525a76] mt-[0.75rem] leading-[1.625]">
                         Razorpay is the only payments solution in India that allows businesses to accept, process and disburse payments with its product suite. It gives you access to all payment modes including credit card, debit card, netbanking, UPI and popular wallets including JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money and PayZapp.
@@ -1143,315 +1229,320 @@
                     <p class="text-[0.625rem] text-[color:#525a76] mt-[0.75rem] leading-[1.625]">
                         Disclaimer: The RazorpayX powered Current Account and VISA corporate credit card are provided by RBI licenced banks. Your RazorpayX powered account is provided by our partner bank, in accordance with RBI regulations. RazorpayX itself is not a bank and doesn't hold or claim to hold a banking license.
                     </p>
-                    <div class="flex justify-start gap-3 mt-6">
+                    <div class="flex items-start gap-3 mt-6">
                         <img src="/assets/footer-certificate-1-21d2bad2.png" alt="" loading="lazy" class="h-[40px]">
                         <img src="/assets/footer-certificate-2-4d9e1626.jpg" alt="" loading="lazy" class="h-20">
                     </div>
                 </div>
 
-                <!-- column 2 -->
-                <div class="w-[23%] max-w-[340px] mt-[2.5rem] flex flex-col gap-1">
-                    <!-- list 1 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Banking Plus
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            RazorpayX
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Current Accounts
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Payouts
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Payout Links
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Corporate Credit Card
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            View Live Demo
-                            <span class="bg-[color:#08c972] text-[color:white] ml-[1px] rounded-sm leading-5 font-bold px-[0.2rem] py-[0.1rem] text-xs">
-                                NEW
-                            </span>
-                        </a>
-                    </ul>
+                <!-- Right part -->
+                <div class="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap sm:justify-start md:justify-between w-auto">
+                    <!-- column 1 -->
+                    <div class="flex flex-col gap-7 mr-[1.5rem]">
+                        <!-- list 1 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Banking Plus
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                RazorpayX
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Current Accounts
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Payouts
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Payout Links
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Corporate Credit Card
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                View Live Demo
+                                <span class="bg-[color:#08c972] text-[color:white] ml-[1px] rounded-sm leading-5 font-bold px-[0.2rem] py-[0.1rem] text-xs">
+                                    NEW
+                                </span>
+                            </a>
+                        </ul>
 
-                    <!-- list 2 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Lending
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Razorpay Capital
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Instant Settlements
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Line of Credit
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Working Capital Loans
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Marketplace Instant Settlements
-                        </a>
-                    </ul>
+                        <!-- list 2 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Lending
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Razorpay Capital
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Instant Settlements
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Line of Credit
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Working Capital Loans
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Marketplace Instant Settlements
+                            </a>
+                        </ul>
 
-                    <!-- list 3 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Become a Partner
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Refer and Earn
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Onboarding APIs
-                        </a>
-                    </ul>
+                        <!-- list 3 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Become a Partner
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Refer and Earn
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Onboarding APIs
+                            </a>
+                        </ul>
 
-                    <!-- list 4 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            More
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Route
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Invoices
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Freelancer Payments
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            International
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Flash Checkout
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            UPI
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            ePOS
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Checkout Demo
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            RazorpayX Payroll
-                        </a>
-                    </ul>
+                        <!-- list 4 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                More
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Route
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Invoices
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Freelancer Payments
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                International
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Flash Checkout
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                UPI
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                ePOS
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Checkout Demo
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                RazorpayX Payroll
+                            </a>
+                        </ul>
+                    </div>
+
+                    <!-- column 2 -->
+                    <div class="flex flex-col gap-7 mr-2">
+                        <!-- list 1 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Accept Payments
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Payment Gateway
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Payment Pages
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Payment Links
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                QR Codes
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Subscriptions
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Smart Collect
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Optimizer
+                            </a>
+                        </ul>
+
+                        <!-- list 2 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Developers
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Docs
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Integrations
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                API Reference
+                            </a>
+                        </ul>
+
+                        <!-- list 3 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Resources
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Blog
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Customer Stories
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Events
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Chargeback Guide
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Settlement Guide
+                            </a>
+                        </ul>
+
+                        <!-- list 4 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Solutions
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Education
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                E-commerce
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                SaaS
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                BFSI
+                            </a>
+                        </ul>
+                        <!-- list 5 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Free Tools
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                GST Calculator
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Online TDS Payment
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                GST NUmber Search
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                GST Search By PAN
+                                <span class="bg-[color:#08c972] text-[color:white] ml-[1px] rounded-sm leading-5 font-bold px-[0.2rem] py-[0.1rem] text-xs">
+                                    NEW
+                                </span>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <!-- column 3 -->
+                    <div class="flex flex-col gap-7 md:w-[33.11%]">
+                        <!-- list 1 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Company
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                About Us
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Careers
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Terms of Use
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Privacy Policy
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Grievance Redressal
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Responsible Disclosure
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Partners
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                White papers
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Corporate Information
+                            </a>
+                        </ul>
+
+                        <!-- list 2 -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Help & Support
+                            </li>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Support
+                            </a>
+                            <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
+                                Knowledge base
+                            </a>
+                        </ul>
+
+                        <!-- social media list -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Find Us Online
+                            </li>
+                            <li class="flex gap-4 items-center mt-3">
+                                <a href="" class="cursor-pointer no-underline">
+                                    <img src="/assets/facebook-icon-2b65a866.svg" alt="" loading="lazy" class="w-6 h-6">
+                                </a>
+                                <a href="" class="cursor-pointer no-underline">
+                                    <img src="/assets/twitter-icon-82cbd3e5.svg" alt="" loading="lazy" class="w-6 h-6">
+                                </a>
+                                <a href="" class="cursor-pointer no-underline">
+                                    <img src="/assets/instagram-icon-6c2b0c16.svg" alt="" loading="lazy" class="w-6 h-6">
+                                </a>
+                                <a href="" class="cursor-pointer no-underline">
+                                    <img src="/assets/github-icon-e2d5f6a2.svg" alt="" loading="lazy" class="w-6 h-6">
+                                </a>
+                                <a href="" class="cursor-pointer no-underline">
+                                    <img src="/assets/linkedin-icon-5471e826.svg" alt="" loading="lazy" class="w-6 h-6">
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Address -->
+                        <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
+                            <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
+                                Regd. Office Address
+                            </li>
+                            <p class="text-sm leading-5 mt-1">
+                                Razorpay Software Private Limited,<br>
+                                1st Floor, SJR Cyber,<br>
+                                22 Laskar Hosur Road, Adugodi,<br>
+                                Bengaluru, 560030,<br>
+                                Karnataka, India <br>
+                                CIN: U72200KA2013PTC097389 <br>
+                            </p>                        
+                        </ul>
+
+                        <!-- Copyright part -->
+                        <p class="text-sm mt-4">
+                            © Razorpay 2023 <br>
+                            All Rights Reserved
+                        </p>
+                    </div>
                 </div>
 
-                <!-- column 3 -->
-                <div class="w-[23%] max-w-[340px] mt-[2.5rem] flex flex-col gap-1">
-                    <!-- list 1 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Accept Payments
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Payment Gateway
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Payment Pages
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Payment Links
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            QR Codes
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Subscriptions
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Smart Collect
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Optimizer
-                        </a>
-                    </ul>
-
-                    <!-- list 2 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Developers
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Docs
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Integrations
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            API Reference
-                        </a>
-                    </ul>
-
-                    <!-- list 3 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Resources
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Blog
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Customer Stories
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Events
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Chargeback Guide
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Settlement Guide
-                        </a>
-                    </ul>
-
-                    <!-- list 4 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Solutions
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Education
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            E-commerce
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            SaaS
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            BFSI
-                        </a>
-                    </ul>
-                    <!-- list 5 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Free Tools
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            GST Calculator
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Online TDS Payment
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            GST NUmber Search
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            GST Search By PAN
-                            <span class="bg-[color:#08c972] text-[color:white] ml-[1px] rounded-sm leading-5 font-bold px-[0.2rem] py-[0.1rem] text-xs">
-                                NEW
-                            </span>
-                        </a>
-                    </ul>
-                </div>
-
-                <!-- column 4 -->
-                <div class="w-[23%] max-w-[340px] mt-[2.5rem] flex flex-col gap-1">
-                    <!-- list 1 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Company
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            About Us
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Careers
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Terms of Use
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Privacy Policy
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Grievance Redressal
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Responsible Disclosure
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Partners
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            White papers
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Corporate Information
-                        </a>
-                    </ul>
-
-                    <!-- list 2 -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Help & Support
-                        </li>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Support
-                        </a>
-                        <a href="" class="cursor-pointer no-underline text-lightBlue500 bg-opacity-0 hover:text-gray2">
-                            Knowledge base
-                        </a>
-                    </ul>
-
-                    <!-- social media list -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Find Us Online
-                        </li>
-                        <li class="flex gap-4 items-center mt-3">
-                            <a href="" class="cursor-pointer no-underline">
-                                <img src="/assets/facebook-icon-2b65a866.svg" alt="" loading="lazy" class="w-6 h-6">
-                            </a>
-                            <a href="" class="cursor-pointer no-underline">
-                                <img src="/assets/twitter-icon-82cbd3e5.svg" alt="" loading="lazy" class="w-6 h-6">
-                            </a>
-                            <a href="" class="cursor-pointer no-underline">
-                                <img src="/assets/instagram-icon-6c2b0c16.svg" alt="" loading="lazy" class="w-6 h-6">
-                            </a>
-                            <a href="" class="cursor-pointer no-underline">
-                                <img src="/assets/github-icon-e2d5f6a2.svg" alt="" loading="lazy" class="w-6 h-6">
-                            </a>
-                            <a href="" class="cursor-pointer no-underline">
-                                <img src="/assets/linkedin-icon-5471e826.svg" alt="" loading="lazy" class="w-6 h-6">
-                            </a>
-                        </li>
-                    </ul>
-
-                    <!-- Address -->
-                    <ul class="flex flex-col gap-1 transition-all duration-[0.15s] ease-out">
-                        <li class="uppercase text-[1rem] text-[color:#525a76]  mt-[24px] font-bold tracking-[0.05em]">
-                            Regd. Office Address
-                        </li>
-                        <p class="text-sm leading-5 mt-1">
-                            Razorpay Software Private Limited,<br>
-                            1st Floor, SJR Cyber,<br>
-                            22 Laskar Hosur Road, Adugodi,<br>
-                            Bengaluru, 560030,<br>
-                            Karnataka, India <br>
-                            CIN: U72200KA2013PTC097389 <br>
-                        </p>                        
-                    </ul>
-
-                    <!-- Copyright part -->
-                    <p class="text-sm mt-4">
-                        © Razorpay 2023 <br>
-                        All Rights Reserved
-                    </p>
-                </div>
+                
             </div>
         </section>
     </div>
