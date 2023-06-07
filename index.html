@@ -51,6 +51,14 @@
             padding-bottom: 110px;
         }
 
+        /* Custom Media Queries (complex to write in Tailwind) */
+
+        @media (max-width: 1024px) {
+            .ctaSection{
+                background-size: 200% 120%;
+            }
+        }
+
         @media (max-width: 768px) {
             .feature-section-2{
                 background-position: 60% 50%;
@@ -63,18 +71,6 @@
 
             .ctaSection{
                 background-size: 350% 190%;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .ctaSection{
-                background-size: 200% 120%;
-            }
-        }
-
-        @media (max-width: 821) {
-            .break2{
-                display: block;
             }
         }
     </style>
@@ -511,7 +507,7 @@
                 </div>
 
                 <!-- Doubt section -->
-                <div class="border rounded-md px-4 py-4  border-[color:#bad8fa] bg-gradient-to-b from-color1 to-color3 mt-4 md:pb-0 mb-[-10rem]">
+                <div class="border rounded-md px-4 py-4  border-[color:#bad8fa] bg-gradient-to-b from-color1 to-color3 mt-4 md:pb-4 md:mb-0 mb-[-10rem]">
                     <!-- Content (in a shrinked width) -->
                     <div class="w-[80%] mx-auto">
                         <p class="font-mullish flex md:flex-row md:items-center md:align-middle md:justify-center text-sm gap-[0.65rem] opacity-80 tracking-wide flex-col items-start">
